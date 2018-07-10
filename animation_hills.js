@@ -3,7 +3,9 @@
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
-		{name:"animation_hills_atlas_", frames: [[7246,727,486,702],[0,0,4915,705],[7246,0,515,725],[7734,1079,256,362],[7763,528,307,549],[7763,0,414,526],[6602,0,642,780],[0,707,1920,841],[4917,0,1683,1057],[1922,1059,4021,207]]}
+		{name:"animation_hills_atlas_", frames: [[0,0,642,780]]},
+		{name:"animation_hills_atlas_2", frames: [[517,0,486,702],[0,0,515,725]]},
+		{name:"animation_hills_atlas_3", frames: [[725,0,256,362],[416,0,307,549],[0,0,414,526]]}
 ];
 
 
@@ -12,73 +14,69 @@ lib.ssMetadata = [
 
 
 (lib.head = function() {
-	this.spriteSheet = ss["animation_hills_atlas_"];
+	this.spriteSheet = ss["animation_hills_atlas_2"];
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.hills_repeating2 = function() {
-	this.spriteSheet = ss["animation_hills_atlas_"];
+	this.initialize(img.hills_repeating2);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,4915,705);
+
+
+(lib.neck = function() {
+	this.spriteSheet = ss["animation_hills_atlas_2"];
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.neck = function() {
-	this.spriteSheet = ss["animation_hills_atlas_"];
-	this.gotoAndStop(2);
-}).prototype = p = new cjs.Sprite();
-
-
-
 (lib.right_frontleg_foot = function() {
-	this.spriteSheet = ss["animation_hills_atlas_"];
-	this.gotoAndStop(3);
+	this.spriteSheet = ss["animation_hills_atlas_3"];
+	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.right_frontleg_upper = function() {
-	this.spriteSheet = ss["animation_hills_atlas_"];
-	this.gotoAndStop(4);
+	this.spriteSheet = ss["animation_hills_atlas_3"];
+	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.right_hindleg_foot = function() {
-	this.spriteSheet = ss["animation_hills_atlas_"];
-	this.gotoAndStop(5);
+	this.spriteSheet = ss["animation_hills_atlas_3"];
+	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.right_hindleg_upper2 = function() {
 	this.spriteSheet = ss["animation_hills_atlas_"];
-	this.gotoAndStop(6);
+	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
 (lib.sky_small = function() {
-	this.spriteSheet = ss["animation_hills_atlas_"];
-	this.gotoAndStop(7);
-}).prototype = p = new cjs.Sprite();
-
+	this.initialize(img.sky_small);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,1920,841);
 
 
 (lib.torso2 = function() {
-	this.spriteSheet = ss["animation_hills_atlas_"];
-	this.gotoAndStop(8);
-}).prototype = p = new cjs.Sprite();
-
+	this.initialize(img.torso2);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,1683,1057);
 
 
 (lib.tracks = function() {
-	this.spriteSheet = ss["animation_hills_atlas_"];
-	this.gotoAndStop(9);
-}).prototype = p = new cjs.Sprite();
-// helper functions:
+	this.initialize(img.tracks);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,4021,207);// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop));
@@ -599,7 +597,7 @@ p.nominalBounds = new cjs.Rectangle(-675.3,-95.7,4249.3,380);
 
 // stage content:
 (lib.animation_hills = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
+if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// Text
 	this.shape = new cjs.Shape();
@@ -712,7 +710,7 @@ p.nominalBounds = new cjs.Rectangle(-675.3,-95.7,4249.3,380);
 	this.hills_mc = new lib.hills();
 	this.hills_mc.name = "hills_mc";
 	this.hills_mc.parent = this;
-	this.hills_mc.setTransform(1750.1,823.9,0.712,0.496,0,0,0,2457.6,352.5);
+	this.hills_mc.setTransform(1730.1,834,0.704,0.496,0,0,0,2457.6,352.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.hills_mc).wait(1));
 
@@ -734,7 +732,13 @@ lib.properties = {
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/animation_hills_atlas_.png", id:"animation_hills_atlas_"}
+		{src:"images/hills_repeating2.png", id:"hills_repeating2"},
+		{src:"images/sky_small.png", id:"sky_small"},
+		{src:"images/torso2.png", id:"torso2"},
+		{src:"images/tracks.png", id:"tracks"},
+		{src:"images/animation_hills_atlas_.png", id:"animation_hills_atlas_"},
+		{src:"images/animation_hills_atlas_2.png", id:"animation_hills_atlas_2"},
+		{src:"images/animation_hills_atlas_3.png", id:"animation_hills_atlas_3"}
 	],
 	preloads: []
 };
