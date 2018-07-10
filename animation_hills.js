@@ -704,7 +704,7 @@ p.nominalBounds = new cjs.Rectangle(-675.3,-95.7,4249.3,380);
 	this.hyena_mc = new lib.hyena_mc();
 	this.hyena_mc.name = "hyena_mc";
 	this.hyena_mc.parent = this;
-	this.hyena_mc.setTransform(657.3,1020.4,1,1,0,0,0,187.8,129.6);
+	this.hyena_mc.setTransform(370,1020,1,1,0,0,0,187.8,129.6);
 
 	this.timeline.addTween(cjs.Tween.get(this.hyena_mc).wait(1));
 
@@ -724,7 +724,7 @@ p.nominalBounds = new cjs.Rectangle(-675.3,-95.7,4249.3,380);
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(754.1,640,5120.9,1188.9);
+p.nominalBounds = new cjs.Rectangle(466.9,640,5408.2,1188.9);
 // library properties:
 lib.properties = {
 	id: 'A3DCCBA8323442ADBBB3502B030CB3E6',
