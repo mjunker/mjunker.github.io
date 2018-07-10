@@ -712,7 +712,7 @@ p.nominalBounds = new cjs.Rectangle(-675.3,-95.7,4249.3,380);
 	this.hills_mc = new lib.hills();
 	this.hills_mc.name = "hills_mc";
 	this.hills_mc.parent = this;
-	this.hills_mc.setTransform(2457.6,836.4,1,1,0,0,0,2457.5,352.5);
+	this.hills_mc.setTransform(1750.1,823.9,0.712,0.496,0,0,0,2457.6,352.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.hills_mc).wait(1));
 
@@ -724,7 +724,7 @@ p.nominalBounds = new cjs.Rectangle(-675.3,-95.7,4249.3,380);
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(466.9,640,5408.2,1188.9);
+p.nominalBounds = new cjs.Rectangle(466.9,640,4249.3,1174.7);
 // library properties:
 lib.properties = {
 	id: 'A3DCCBA8323442ADBBB3502B030CB3E6',
