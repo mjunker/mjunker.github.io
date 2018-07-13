@@ -615,25 +615,25 @@ p.nominalBounds = new cjs.Rectangle(-675.3,-95.7,4249.3,380);
 
 
 // stage content:
-(lib.animation_hills = function(mode,startPosition,loop) {
+(lib.animation_hills_smaller = function(mode,startPosition,loop) {
 if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 
 	// Hyena
 	this.hyena_mc = new lib.hyena_mc();
 	this.hyena_mc.name = "hyena_mc";
 	this.hyena_mc.parent = this;
-	this.hyena_mc.setTransform(308.4,1383.4,0.833,0.833,0,0,0,187.9,129.7);
+	this.hyena_mc.setTransform(246.8,1106.7,0.667,0.667,0,0,0,188.1,129.8);
 
 	this.timeline.addTween(cjs.Tween.get(this.hyena_mc).wait(1));
 
 	// Floor
 	this.instance = new lib.black();
 	this.instance.parent = this;
-	this.instance.setTransform(898,1357,0.833,0.833);
+	this.instance.setTransform(719,1085,0.667,0.667);
 
 	this.instance_1 = new lib.black();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(-16,1357,0.833,0.833);
+	this.instance_1.setTransform(-13,1085,0.667,0.667);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
 
@@ -641,24 +641,24 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.hills_mc = new lib.hills();
 	this.hills_mc.name = "hills_mc";
 	this.hills_mc.parent = this;
-	this.hills_mc.setTransform(1441.8,1228.3,0.587,0.414,0,0,0,2457.8,352.7);
+	this.hills_mc.setTransform(1153.4,982.7,0.469,0.331,0,0,0,2458,352.9);
 
 	this.timeline.addTween(cjs.Tween.get(this.hills_mc).wait(1));
 
 	// Sky
 	this.instance_2 = new lib.Sky_smaller();
 	this.instance_2.parent = this;
-	this.instance_2.setTransform(795.4,429.8,1.562,1.562,0,0,0,839.5,671.5);
+	this.instance_2.setTransform(636.3,343.7,1.25,1.25,0,0,0,839.5,671.4);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(283.7,180.5,3646.3,2587.3);
+p.nominalBounds = new cjs.Rectangle(226.9,144.5,2916.9,2069.2);
 // library properties:
 lib.properties = {
 	id: 'A3DCCBA8323442ADBBB3502B030CB3E6',
-	width: 1600,
-	height: 1600,
+	width: 1280,
+	height: 1280,
 	fps: 24,
 	color: "#000000",
 	opacity: 1.00,
