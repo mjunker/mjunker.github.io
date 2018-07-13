@@ -2,77 +2,89 @@
 
 var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
-lib.ssMetadata = [];
+lib.ssMetadata = [
+		{name:"animation_hills_atlas_", frames: [[0,0,1679,1343],[0,1554,1100,733],[1619,1554,486,702],[1102,1554,515,725],[2107,1554,256,362],[3782,782,307,549],[3366,782,414,526],[3366,0,642,780],[1681,0,1683,1057],[0,1345,4021,207]]}
+];
 
 
 // symbols:
 
 
 
-(lib.background_stars4 = function() {
-	this.initialize(img.background_stars4);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,1679,1343);
+(lib.background_stars4_small = function() {
+	this.spriteSheet = ss["animation_hills_atlas_"];
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.black = function() {
-	this.initialize(img.black);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,1100,733);
+	this.spriteSheet = ss["animation_hills_atlas_"];
+	this.gotoAndStop(1);
+}).prototype = p = new cjs.Sprite();
 
 
-(lib.head = function() {
-	this.initialize(img.head);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,486,702);
+
+(lib.head_small = function() {
+	this.spriteSheet = ss["animation_hills_atlas_"];
+	this.gotoAndStop(2);
+}).prototype = p = new cjs.Sprite();
 
 
-(lib.hills_repeating2 = function() {
-	this.initialize(img.hills_repeating2);
+
+(lib.hills_repeating2_small = function() {
+	this.initialize(img.hills_repeating2_small);
 }).prototype = p = new cjs.Bitmap();
 p.nominalBounds = new cjs.Rectangle(0,0,4915,705);
 
 
-(lib.neck = function() {
-	this.initialize(img.neck);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,515,725);
+(lib.neck_small = function() {
+	this.spriteSheet = ss["animation_hills_atlas_"];
+	this.gotoAndStop(3);
+}).prototype = p = new cjs.Sprite();
 
 
-(lib.right_frontleg_foot = function() {
-	this.initialize(img.right_frontleg_foot);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,256,362);
+
+(lib.right_frontleg_foot_small = function() {
+	this.spriteSheet = ss["animation_hills_atlas_"];
+	this.gotoAndStop(4);
+}).prototype = p = new cjs.Sprite();
 
 
-(lib.right_frontleg_upper = function() {
-	this.initialize(img.right_frontleg_upper);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,307,549);
+
+(lib.right_frontleg_upper_small = function() {
+	this.spriteSheet = ss["animation_hills_atlas_"];
+	this.gotoAndStop(5);
+}).prototype = p = new cjs.Sprite();
 
 
-(lib.right_hindleg_foot = function() {
-	this.initialize(img.right_hindleg_foot);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,414,526);
+
+(lib.right_hindleg_foot_small = function() {
+	this.spriteSheet = ss["animation_hills_atlas_"];
+	this.gotoAndStop(6);
+}).prototype = p = new cjs.Sprite();
 
 
-(lib.right_hindleg_upper2 = function() {
-	this.initialize(img.right_hindleg_upper2);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,642,780);
+
+(lib.right_hindleg_upper2_small = function() {
+	this.spriteSheet = ss["animation_hills_atlas_"];
+	this.gotoAndStop(7);
+}).prototype = p = new cjs.Sprite();
 
 
-(lib.torso2 = function() {
-	this.initialize(img.torso2);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,1683,1057);
+
+(lib.torso2_small = function() {
+	this.spriteSheet = ss["animation_hills_atlas_"];
+	this.gotoAndStop(8);
+}).prototype = p = new cjs.Sprite();
 
 
-(lib.tracks = function() {
-	this.initialize(img.tracks);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,4021,207);// helper functions:
+
+(lib.tracks_small = function() {
+	this.spriteSheet = ss["animation_hills_atlas_"];
+	this.gotoAndStop(9);
+}).prototype = p = new cjs.Sprite();
+// helper functions:
 
 function mc_symbol_clone() {
 	var clone = this._cloneProps(new this.constructor(this.mode, this.startPosition, this.loop));
@@ -95,7 +107,7 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.background_stars4();
+	this.instance = new lib.background_stars4_small();
 	this.instance.parent = this;
 	this.instance.setTransform(-839.5,-671.5);
 
@@ -109,7 +121,7 @@ p.nominalBounds = new cjs.Rectangle(-839.5,-671.5,1679,1343);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.torso2();
+	this.instance = new lib.torso2_small();
 	this.instance.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -117,23 +129,23 @@ p.nominalBounds = new cjs.Rectangle(-839.5,-671.5,1679,1343);
 }).prototype = getMCSymbolPrototype(lib.torso_new, new cjs.Rectangle(0,0,1683,1057), null);
 
 
-(lib.right_hindleg_upper2_1 = function(mode,startPosition,loop) {
+(lib.right_hindleg_upper2 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.right_hindleg_upper2();
+	this.instance = new lib.right_hindleg_upper2_small();
 	this.instance.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.right_hindleg_upper2_1, new cjs.Rectangle(0,0,642,780), null);
+}).prototype = getMCSymbolPrototype(lib.right_hindleg_upper2, new cjs.Rectangle(0,0,642,780), null);
 
 
 (lib.right_hind_foot = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.right_hindleg_foot();
+	this.instance = new lib.right_hindleg_foot_small();
 	this.instance.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -145,7 +157,7 @@ p.nominalBounds = new cjs.Rectangle(-839.5,-671.5,1679,1343);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.right_frontleg_upper();
+	this.instance = new lib.right_frontleg_upper_small();
 	this.instance.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -157,7 +169,7 @@ p.nominalBounds = new cjs.Rectangle(-839.5,-671.5,1679,1343);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.right_frontleg_foot();
+	this.instance = new lib.right_frontleg_foot_small();
 	this.instance.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -171,23 +183,23 @@ p.nominalBounds = new cjs.Rectangle(-839.5,-671.5,1679,1343);
 }).prototype = getMCSymbolPrototype(lib._null, null, null);
 
 
-(lib.neck_1 = function(mode,startPosition,loop) {
+(lib.neck = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.neck();
+	this.instance = new lib.neck_small();
 	this.instance.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.neck_1, new cjs.Rectangle(0,0,515,725), null);
+}).prototype = getMCSymbolPrototype(lib.neck, new cjs.Rectangle(0,0,515,725), null);
 
 
 (lib.hills_animated = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.hills_repeating2();
+	this.instance = new lib.hills_repeating2_small();
 	this.instance.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -195,23 +207,23 @@ p.nominalBounds = new cjs.Rectangle(-839.5,-671.5,1679,1343);
 }).prototype = getMCSymbolPrototype(lib.hills_animated, new cjs.Rectangle(0,0,4915,705), null);
 
 
-(lib.head_1 = function(mode,startPosition,loop) {
+(lib.head = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.head();
+	this.instance = new lib.head_small();
 	this.instance.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.head_1, new cjs.Rectangle(0,0,486,702), null);
+}).prototype = getMCSymbolPrototype(lib.head, new cjs.Rectangle(0,0,486,702), null);
 
 
 (lib.animation = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.tracks();
+	this.instance = new lib.tracks_small();
 	this.instance.parent = this;
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -280,12 +292,12 @@ p.nominalBounds = new cjs.Rectangle(0,0,1679,1343);
 	this.ikNode_210.parent = this;
 	this.ikNode_210.setTransform(25.3,63,0.157,0.157,-130.7,0,0,16.1,16);
 
-	this.ikNode_202 = new lib.head_1();
+	this.ikNode_202 = new lib.head();
 	this.ikNode_202.name = "ikNode_202";
 	this.ikNode_202.parent = this;
 	this.ikNode_202.setTransform(279.5,78.4,0.154,0.154,-46,0,0,123,160.5);
 
-	this.ikNode_201 = new lib.neck_1();
+	this.ikNode_201 = new lib.neck();
 	this.ikNode_201.name = "ikNode_201";
 	this.ikNode_201.parent = this;
 	this.ikNode_201.setTransform(237.5,82.5,0.155,0.155,-22.8,0,0,99.7,399.8);
@@ -320,7 +332,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,1679,1343);
 	this.ikNode_206.parent = this;
 	this.ikNode_206.setTransform(130.2,240,0.157,0.266,-22.1,0,0,29.7,20.9);
 
-	this.ikNode_195 = new lib.right_hindleg_upper2_1();
+	this.ikNode_195 = new lib.right_hindleg_upper2();
 	this.ikNode_195.name = "ikNode_195";
 	this.ikNode_195.parent = this;
 	this.ikNode_195.setTransform(79.7,101.6,0.155,0.155,-12.5,0,0,454.2,325.5);
@@ -330,7 +342,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,1679,1343);
 	this.ikNode_194.parent = this;
 	this.ikNode_194.setTransform(165,97,0.156,0.156,2.3,0,0,845.8,548.1);
 
-	this.ikNode_204 = new lib.right_hindleg_upper2_1();
+	this.ikNode_204 = new lib.right_hindleg_upper2();
 	this.ikNode_204.name = "ikNode_204";
 	this.ikNode_204.parent = this;
 	this.ikNode_204.setTransform(108.8,106.5,0.156,0.156,-27.5,0,0,409.7,418.8);
@@ -375,12 +387,12 @@ p.nominalBounds = new cjs.Rectangle(0,0.3,378.5,255.6);
 	this.ikNode_193.parent = this;
 	this.ikNode_193.setTransform(31.6,59.2,0.156,0.156,-130.7,0,0,16.6,15.6);
 
-	this.ikNode_185 = new lib.head_1();
+	this.ikNode_185 = new lib.head();
 	this.ikNode_185.name = "ikNode_185";
 	this.ikNode_185.parent = this;
 	this.ikNode_185.setTransform(285.7,74.4,0.153,0.153,-46,0,0,124.4,161.6);
 
-	this.ikNode_184 = new lib.neck_1();
+	this.ikNode_184 = new lib.neck();
 	this.ikNode_184.name = "ikNode_184";
 	this.ikNode_184.parent = this;
 	this.ikNode_184.setTransform(243.5,78.7,0.154,0.155,-22.8,0,0,100.5,401.9);
@@ -415,7 +427,7 @@ p.nominalBounds = new cjs.Rectangle(0,0.3,378.5,255.6);
 	this.ikNode_189.parent = this;
 	this.ikNode_189.setTransform(136.5,236.1,0.156,0.265,-22.1,0,0,30.8,21.8);
 
-	this.ikNode_178 = new lib.right_hindleg_upper2_1();
+	this.ikNode_178 = new lib.right_hindleg_upper2();
 	this.ikNode_178.name = "ikNode_178";
 	this.ikNode_178.parent = this;
 	this.ikNode_178.setTransform(85.8,97.9,0.154,0.154,-12.4,0,0,457.7,325);
@@ -425,7 +437,7 @@ p.nominalBounds = new cjs.Rectangle(0,0.3,378.5,255.6);
 	this.ikNode_177.parent = this;
 	this.ikNode_177.setTransform(170.7,93.1,0.155,0.155,2.2,0,0,844.2,547.6);
 
-	this.ikNode_187 = new lib.right_hindleg_upper2_1();
+	this.ikNode_187 = new lib.right_hindleg_upper2();
 	this.ikNode_187.name = "ikNode_187";
 	this.ikNode_187.parent = this;
 	this.ikNode_187.setTransform(114.9,102.7,0.155,0.155,-27.5,0,0,411.8,419.6);
@@ -470,12 +482,12 @@ p.nominalBounds = new cjs.Rectangle(6.2,-3.3,377.6,254.7);
 	this.ikNode_227.parent = this;
 	this.ikNode_227.setTransform(30.6,61.4,0.155,0.155,-132.7,0,0,16.6,15.7);
 
-	this.ikNode_219 = new lib.head_1();
+	this.ikNode_219 = new lib.head();
 	this.ikNode_219.name = "ikNode_219";
 	this.ikNode_219.parent = this;
 	this.ikNode_219.setTransform(284.2,85.1,0.153,0.153,-32.3,0,0,124.5,161);
 
-	this.ikNode_218 = new lib.neck_1();
+	this.ikNode_218 = new lib.neck();
 	this.ikNode_218.name = "ikNode_218";
 	this.ikNode_218.parent = this;
 	this.ikNode_218.setTransform(243.6,73.4,0.153,0.154,-1.2,0,0,100.5,401.9);
@@ -510,7 +522,7 @@ p.nominalBounds = new cjs.Rectangle(6.2,-3.3,377.6,254.7);
 	this.ikNode_223.parent = this;
 	this.ikNode_223.setTransform(73.7,224.5,0.155,0.265,-3.3,0,0,31.1,22);
 
-	this.ikNode_212 = new lib.right_hindleg_upper2_1();
+	this.ikNode_212 = new lib.right_hindleg_upper2();
 	this.ikNode_212.name = "ikNode_212";
 	this.ikNode_212.parent = this;
 	this.ikNode_212.setTransform(85.9,91.3,0.153,0.153,-41.8,0,0,459.2,327.5);
@@ -520,7 +532,7 @@ p.nominalBounds = new cjs.Rectangle(6.2,-3.3,377.6,254.7);
 	this.ikNode_211.parent = this;
 	this.ikNode_211.setTransform(173.3,88.6,0.154,0.154,1.6,0,0,843.4,548.9);
 
-	this.ikNode_221 = new lib.right_hindleg_upper2_1();
+	this.ikNode_221 = new lib.right_hindleg_upper2();
 	this.ikNode_221.name = "ikNode_221";
 	this.ikNode_221.parent = this;
 	this.ikNode_221.setTransform(114.9,98,0.155,0.155,0.2,0,0,411.9,418.7);
@@ -555,12 +567,7 @@ p.nominalBounds = new cjs.Rectangle(-0.1,0.5,375.1,247.6);
 	this.hills_animated.parent = this;
 	this.hills_animated.setTransform(2457.5,352.5,1,1,0,0,0,2457.5,352.5);
 
-	this.instance = new lib.hills_animated();
-	this.instance.parent = this;
-	this.instance.setTransform(-537.4,352.5,1,1,0,0,0,2457.5,352.5);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.hills_animated}]}).to({state:[{t:this.instance}]},3717).wait(1));
-	this.timeline.addTween(cjs.Tween.get(this.hills_animated).to({_off:true,x:-537.4},3717).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.hills_animated).to({x:-537.4},3717).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(0,0,4915,705);
@@ -615,18 +622,18 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.hyena_mc = new lib.hyena_mc();
 	this.hyena_mc.name = "hyena_mc";
 	this.hyena_mc.parent = this;
-	this.hyena_mc.setTransform(370.1,1660,1,1,0,0,0,187.9,129.6);
+	this.hyena_mc.setTransform(308.4,1383.4,0.833,0.833,0,0,0,187.9,129.7);
 
 	this.timeline.addTween(cjs.Tween.get(this.hyena_mc).wait(1));
 
 	// Floor
 	this.instance = new lib.black();
 	this.instance.parent = this;
-	this.instance.setTransform(1078,1629);
+	this.instance.setTransform(898,1357,0.833,0.833);
 
 	this.instance_1 = new lib.black();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(-19,1629);
+	this.instance_1.setTransform(-16,1357,0.833,0.833);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
 
@@ -634,39 +641,30 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.hills_mc = new lib.hills();
 	this.hills_mc.name = "hills_mc";
 	this.hills_mc.parent = this;
-	this.hills_mc.setTransform(1730.1,1474,0.704,0.496,0,0,0,2457.8,352.6);
+	this.hills_mc.setTransform(1441.8,1228.3,0.587,0.414,0,0,0,2457.8,352.7);
 
 	this.timeline.addTween(cjs.Tween.get(this.hills_mc).wait(1));
 
 	// Sky
 	this.instance_2 = new lib.Sky_smaller();
 	this.instance_2.parent = this;
-	this.instance_2.setTransform(954.4,515.7,1.875,1.875,0,0,0,839.5,671.5);
+	this.instance_2.setTransform(795.4,429.8,1.562,1.562,0,0,0,839.5,671.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(340.4,216.6,4375.7,3105.4);
+p.nominalBounds = new cjs.Rectangle(283.7,180.5,3646.3,2587.3);
 // library properties:
 lib.properties = {
 	id: 'A3DCCBA8323442ADBBB3502B030CB3E6',
-	width: 1920,
-	height: 1920,
+	width: 1600,
+	height: 1600,
 	fps: 24,
 	color: "#000000",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/background_stars4.jpg", id:"background_stars4"},
-		{src:"images/black.png", id:"black"},
-		{src:"images/head.png", id:"head"},
-		{src:"images/hills_repeating2.png", id:"hills_repeating2"},
-		{src:"images/neck.png", id:"neck"},
-		{src:"images/right_frontleg_foot.png", id:"right_frontleg_foot"},
-		{src:"images/right_frontleg_upper.png", id:"right_frontleg_upper"},
-		{src:"images/right_hindleg_foot.png", id:"right_hindleg_foot"},
-		{src:"images/right_hindleg_upper2.png", id:"right_hindleg_upper2"},
-		{src:"images/torso2.png", id:"torso2"},
-		{src:"images/tracks.png", id:"tracks"}
+		{src:"images/hills_repeating2_small.png", id:"hills_repeating2_small"},
+		{src:"images/animation_hills_atlas_.png", id:"animation_hills_atlas_"}
 	],
 	preloads: []
 };
