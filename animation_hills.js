@@ -627,18 +627,18 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.hyena_mc = new lib.hyena_mc();
 	this.hyena_mc.name = "hyena_mc";
 	this.hyena_mc.parent = this;
-	this.hyena_mc.setTransform(197.4,885.3,0.533,0.533,0,0,0,187.9,129.6);
+	this.hyena_mc.setTransform(370,1660,1,1,0,0,0,187.8,129.6);
 
 	this.timeline.addTween(cjs.Tween.get(this.hyena_mc).wait(1));
 
 	// Floor
 	this.instance = new lib.black();
 	this.instance.parent = this;
-	this.instance.setTransform(575,869,0.533,0.533);
+	this.instance.setTransform(1079,1630);
 
 	this.instance_1 = new lib.black();
 	this.instance_1.parent = this;
-	this.instance_1.setTransform(-10,869,0.533,0.533);
+	this.instance_1.setTransform(-18,1630);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1},{t:this.instance}]}).wait(1));
 
@@ -646,24 +646,24 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 	this.hills_mc = new lib.hills();
 	this.hills_mc.name = "hills_mc";
 	this.hills_mc.parent = this;
-	this.hills_mc.setTransform(922.8,786.1,0.375,0.265,0,0,0,2457.8,352.6);
+	this.hills_mc.setTransform(1730.1,1474,0.704,0.496,0,0,0,2457.6,352.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.hills_mc).wait(1));
 
 	// Sky
 	this.instance_2 = new lib.Sky();
 	this.instance_2.parent = this;
-	this.instance_2.setTransform(548.8,410.6,0.533,0.533,0,0,0,1150,919.8);
+	this.instance_2.setTransform(1029,769.9,1,1,0,0,0,1150,919.9);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(1));
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(248.9,325.4,2266.3,1446.6);
+p.nominalBounds = new cjs.Rectangle(466.9,610.1,4249.3,2713);
 // library properties:
 lib.properties = {
 	id: 'A3DCCBA8323442ADBBB3502B030CB3E6',
-	width: 1024,
-	height: 1024,
+	width: 1920,
+	height: 1920,
 	fps: 24,
 	color: "#000000",
 	opacity: 1.00,
