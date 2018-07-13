@@ -8,6 +8,7 @@
 	5. Remove unnecessary comments before creating your template.
 -->
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="authoring-tool" content="Adobe_Animate_CC">
@@ -18,78 +19,107 @@
 			color: white;
 			text-decoration: none;
 		}
+
 		/* visited link */
+
 		a:visited {
 			color: white;
 			text-decoration: none;
 		}
+
 		/* mouse over link */
+
 		a:hover {
 			color: white;
 			text-decoration: none;
 		}
+
 		/* selected link */
+
 		a:active {
 			color: white;
 			text-decoration: none;
 		}
+
 		html {
 			overflow: hidden;
 			height: 100%;
 		}
+
 		body {
 			height: 100%;
 			overflow: auto;
 			background-color: black;
 			font-size: 14pt;
 		}
+
 		h2 {
 			font-size: 16pt;
 		}
+
 		.blinking {
 			animation: blinker 3s linear infinite;
 		}
+
 		@keyframes blinker {
 			50% {
 				opacity: 0;
 			}
 		}
+
 		.vertical-line {
 			border-left: 1px solid white;
 			height: 100%;
 			padding-left: 20px
 		}
+
 		#announcement {
 			font-size: 35pt;
 			font-weight: bold;
 			margin-bottom: 50px;
 		}
+
 		.section {
 			padding-left: 20px
 		}
+
 		#animation_container {
 			position: fixed;
 			margin: auto;
 			left: 0;
 			right: 0;
-			top: 0;
+			top: 1;
 			bottom: 0;
 			z-index: -1;
 		}
+
 		.content {
 			text-align: justify;
 			background-color: rgba(0, 0, 0, 0.7);
-			margin-top: 500px;
+			margin-top: 300px;
 			margin-left: 40%;
 			padding: 20px;
 			width: 500px;
 			z-index: 100;
 			color: white;
 		}
+
 		.separator {
 			border-top: 1px solid white;
 			height: 1px;
 			margin: 16px 0;
+		}
+
+		.header {
+			color: white;
+			font-weight: bold;
+			margin-left: 10%;
+			margin-top: 100px;
+
+			font-size: 33pt;
+			position: absolute;
+			height: 160px;
+			z-index: 101;
 		}
 	</style>
 	<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
@@ -165,29 +195,38 @@
 					stage.tickOnUpdate = true;
 				}
 			}
-			makeResponsive(true, 'both', true, 1);
+			makeResponsive(false, 'both', true, 1);
 			AdobeAn.compositionLoaded(lib.properties.id);
 			fnStartAnimation();
 		}
 	</script>
 	<!-- write your code here -->
 </head>
+
 <body onload="init();" style="margin:0px;">
 	<div id="animation_container" style="background-color:rgba(0, 0, 0, 1.00); width:1920px; height:1280px">
 		<canvas id="canvas" width="1920" height="1280" style="position: absolute; display: block; background-color:rgba(0, 0, 0, 1.00);"></canvas>
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1920px; height:1280px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
 	</div>
-	<div id="waveform"></div>
+
+	<div class="header vertical-line">
+		<div>Everything Quiet</div>
+		<div>DEAN WAKE</div>
+	</div>
+
 	<div class="content">
+
+
 		<div id="announcement" class="vertical-line">
 			<div>EP RELEASE PARTY</div>
-			<div>GASKESSEL, BERNE</div>
+			<div>GASKESSEL, BERN</div>
 			<div>SA 15.09.2018</div>
 			<a class="blinking" href="http://www.gaskessel.ch/sa-15-09-18-dean-wakech-plattentaufe-rock-pop/">TICKETS</a>
 		</div>
 		<div class="section">
-			<p>This year we will celebrate the release of our new EP Everything Quiet. More about the party and EP will be announced soon. Till then, you can stay up to date by subscribing to our newsletter:</p>
+			<p>This year we will celebrate the release of our new EP Everything Quiet with special guest. Till then, you can stay up
+				to date by subscribing to our newsletter:</p>
 			<!-- Begin MailChimp Signup Form -->
 			<link href="https://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 			<style type="text/css">
@@ -197,6 +236,7 @@
 					width: 100%;
 					margin-top: 30px;
 				}
+
 				/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
 						We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 			</style>
@@ -219,4 +259,5 @@
 		</div>
 	</div>
 </body>
+
 </html>
