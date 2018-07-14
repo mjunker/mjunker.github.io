@@ -11,7 +11,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="authoring-tool" content="Adobe_Animate_CC">
+	<meta name="authoring-tool">
 	<title>Dean Wake</title>
 	<!-- write your code here -->
 	<style>
@@ -51,6 +51,7 @@
 			overflow: auto;
 			background-color: black;
 			font-size: 14pt;
+			color: white;
 		}
 
 		h2 {
@@ -83,6 +84,15 @@
 			padding-left: 20px
 		}
 
+		.container {
+			width: 100%;
+			position: fixed;
+			margin-left: 10%;
+			margin-right: 10%;
+			margin-top: 0%;
+			margin-bottom: auto;
+		}
+
 		#animation_container {
 			position: fixed;
 			margin: auto;
@@ -101,7 +111,6 @@
 			padding: 20px;
 			width: 500px;
 			z-index: 100;
-			color: white;
 		}
 
 		.separator {
@@ -111,15 +120,25 @@
 		}
 
 		.header {
-			color: white;
-			font-weight: bold;
-			margin-left: 10%;
-			margin-top: 100px;
+			margin-top: 50px;
+			z-index: 101;
+		}
 
-			font-size: 33pt;
+		.header-left {
+			font-weight: bold;
+			margin-left: 5%;
+			font-size: 30pt;
 			position: absolute;
 			height: 160px;
-			z-index: 101;
+			float: left;
+		}
+
+		.logo {
+			width: 250px;
+			margin: auto;
+			position: absolute;
+			margin-left: 10%;
+
 		}
 	</style>
 	<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
@@ -204,60 +223,63 @@
 </head>
 
 <body onload="init();" style="margin:0px;">
+	<div class="container">
+		<div class="header">
+			<div class="header-left">
+					<img alt="Dean Wake Logo" src="images/dean-wake-logo-02_inverted.svg" class="logo">
+			</div>
+		</div>
+
+
+		<div class="content">
+			<div id="announcement" class="vertical-line">
+				<div>EP RELEASE PARTY</div>
+				<div>GASKESSEL, BERN</div>
+				<div>SA 15.09.2018</div>
+				<a class="blinking" href="http://www.gaskessel.ch/sa-15-09-18-dean-wakech-plattentaufe-rock-pop/">TICKETS</a>
+			</div>
+			<div class="section">
+				<p>This year we will celebrate the release of our new EP Everything Quiet with special guest. Till then, you can stay up
+					to date by subscribing to our newsletter:</p>
+				<!-- Begin MailChimp Signup Form -->
+				<link href="https://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+				<style type="text/css">
+					#mc_embed_signup {
+						clear: left;
+						font: 14px Helvetica, Arial, sans-serif;
+						width: 100%;
+						margin-top: 30px;
+					}
+
+					/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+										We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+				</style>
+				<div id="mc_embed_signup">
+					<form action="https://deanwake.us17.list-manage.com/subscribe/post?u=a31bb7b466ab0d8603d952e20&amp;id=ec824b576e" method="post"
+					 id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+						<div id="mc_embed_signup_scroll">
+							<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
+							<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+							<div style="position: absolute; left: -5000px;" aria-hidden="true">
+								<input type="text" name="b_a31bb7b466ab0d8603d952e20_ec824b576e" tabindex="-1" value="">
+							</div>
+							<div class="clear">
+								<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+							</div>
+						</div>
+					</form>
+				</div>
+				<!--End mc_embed_signup-->
+			</div>
+		</div>
+	</div>
 	<div id="animation_container" style="background-color:rgba(0, 0, 0, 1.00); width:1920px; height:1280px">
 		<canvas id="canvas" width="1920" height="1280" style="position: absolute; display: block; background-color:rgba(0, 0, 0, 1.00);"></canvas>
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1920px; height:1280px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
 	</div>
 
-	<div class="header vertical-line">
-		<div>Everything Quiet</div>
-		<div>DEAN WAKE</div>
-	</div>
 
-	<div class="content">
-
-
-		<div id="announcement" class="vertical-line">
-			<div>EP RELEASE PARTY</div>
-			<div>GASKESSEL, BERN</div>
-			<div>SA 15.09.2018</div>
-			<a class="blinking" href="http://www.gaskessel.ch/sa-15-09-18-dean-wakech-plattentaufe-rock-pop/">TICKETS</a>
-		</div>
-		<div class="section">
-			<p>This year we will celebrate the release of our new EP Everything Quiet with special guest. Till then, you can stay up
-				to date by subscribing to our newsletter:</p>
-			<!-- Begin MailChimp Signup Form -->
-			<link href="https://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-			<style type="text/css">
-				#mc_embed_signup {
-					clear: left;
-					font: 14px Helvetica, Arial, sans-serif;
-					width: 100%;
-					margin-top: 30px;
-				}
-
-				/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-						We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-			</style>
-			<div id="mc_embed_signup">
-				<form action="https://deanwake.us17.list-manage.com/subscribe/post?u=a31bb7b466ab0d8603d952e20&amp;id=ec824b576e" method="post"
-				 id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-					<div id="mc_embed_signup_scroll">
-						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
-						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-						<div style="position: absolute; left: -5000px;" aria-hidden="true">
-							<input type="text" name="b_a31bb7b466ab0d8603d952e20_ec824b576e" tabindex="-1" value="">
-						</div>
-						<div class="clear">
-							<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-						</div>
-					</div>
-				</form>
-			</div>
-			<!--End mc_embed_signup-->
-		</div>
-	</div>
 </body>
 
 </html>
