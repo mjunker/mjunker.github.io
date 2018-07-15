@@ -50,7 +50,7 @@
 			height: 100%;
 			overflow: auto;
 			background-color: black;
-			font-size: 14pt;
+			font-size: 16pt;
 			color: white;
 			font-family: 'Source Code Pro', 'Oxygen', 'Cuprum', 'Roboto Slab', sans-serif;
 		}
@@ -87,6 +87,7 @@
 		.section {
 			padding-left: 20px;
 			margin-bottom: 50px;
+			margin-top: 80px;
 		}
 
 		.container {
@@ -129,33 +130,38 @@
 
 		.header {
 			margin-top: 50px;
+			margin-left: 5%;
 			z-index: 101;
 		}
 
-		.header-left {
-			font-weight: bold;
-			margin-left: 5%;
+		#social-icons {
+			margin-left: 10px;
+			margin-top: 170px;
 			font-size: 30pt;
-			position: absolute;
+			position: fixed;
 			height: 160px;
-			float: left;
 		}
 
-		.logo {
-			width: 250px;
+		#logo {
+			height: 160px;
 			margin: auto;
 			position: fixed;
-
 		}
 
+		#irascible-logo {
+			width: 300px;
+		}
+
+		#about-section {
+			text-align: center;
+			font-size: 12pt;
+		}
 
 		/* Mail Chimp */
 
 		#mc_embed_signup {
 			clear: left;
 			font: 'Source Code Pro', sans-serif;
-
-
 		}
 
 		#mc_embed_signup form {
@@ -163,6 +169,8 @@
 		}
 	</style>
 	<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<!--
 	<link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
@@ -171,10 +179,10 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 	<link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-
-
 	<script src="animation_hills.js"></script>
 	<script>
+
+
 		var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 		function init() {
 			canvas = document.getElementById("canvas");
@@ -257,8 +265,21 @@
 	<div class="container">
 		<div class="header">
 			<div class="header-left">
-				<img alt="Dean Wake Logo" src="images/dean-wake-logo-02_inverted.svg" class="logo">
+				<img alt="Dean Wake Logo" src="images/dean-wake-logo-02_inverted.svg" id="logo">
 			</div>
+			<div id="social-icons">
+				<a target="_blank" href="https://www.facebook.com/Dean-Wake-113178252085227/">
+					<i class="fa fa-facebook" title="Facebook"></i>
+				</a>
+				<a target="_blank" href="https://www.youtube.com/watch?v=CQRDYQwlm8s">
+					<i class="fa fa-youtube-play" title="Youtube"></i>
+				</a>
+				<a target="_blank" href="https://www.instagram.com/deanwakeband/">
+					<i class="fa fa-instagram" title="Instagram"></i>
+				</a>
+			</div>
+
+
 		</div>
 
 		<div class="content">
@@ -269,24 +290,32 @@
 				<a class="blinking" href="http://www.gaskessel.ch/sa-15-09-18-dean-wakech-plattentaufe-rock-pop/">TICKETS</a>
 			</div>
 			<div class="section">
-				<p>This year we will celebrate the release of our new EP Everything Quiet with special guests. Here's a sneak peak to our EP:</p>
+				<p>This year we will celebrate the release of our new EP Everything Quiet with special guests. Here's a sneak peak of our
+					EP:
+				</p>
 				<iframe width="480" height="300" src="https://www.youtube.com/embed/CQRDYQwlm8s" frameborder="0" allow="autoplay; encrypted-media"
-				allowfullscreen></iframe>
+				 allowfullscreen></iframe>
 			</div>
 
 			<div class="section">
 				<h2>GIGS</h2>
 				<div class="separator"></div>
 				<div class="gigs">
-					<a href="http://www.kaeptnholger.ch/">So 26.08.2018 Käpt'n Holger, Langnau</a><br>
-					<a href="http://www.gaskessel.ch/sa-15-09-18-dean-wakech-plattentaufe-rock-pop">Sa 15.09.2018 Gaskessel, Bern</a><br>
-					<a href="https://www.meck.ch/">Sa 27.10.2018 Meck, Frick</a><br>
-					<a href="https://www.meck.ch/">Do 29.11.2018 Mokka, Thun</a><br>
+					<a href="http://www.kaeptnholger.ch/">So 26.08.2018 Käpt'n Holger, Langnau</a>
+					<br>
+					<a href="http://www.gaskessel.ch/sa-15-09-18-dean-wakech-plattentaufe-rock-pop">Sa 15.09.2018 Gaskessel, Bern</a>
+					<br>
+					<a href="https://www.meck.ch/">Sa 27.10.2018 Meck, Frick</a>
+					<br>
+					<a href="https://www.mokka.ch/">Do 29.11.2018 Mokka, Thun</a>
+					<br>
 				</div>
 			</div>
 
+
+
 			<div class="section">
-				<h2>ABOUT</h2>
+				<h2>SUBSCRIBE</h2>
 				<div class="separator"></div>
 				<!-- Begin MailChimp Signup Form -->
 				<div id="mc_embed_signup">
@@ -294,7 +323,6 @@
 					 id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
 						<div id="mc_embed_signup_scroll">
-							<p> Stay up to date by subscribing to our newsletter:</p>
 							<div class="indicates-required">
 								<!-- <span class="asterisk">*</span> indicates required</div>-->
 								<div class="mc-field-group">
@@ -323,6 +351,17 @@
 					</div>
 				</div>
 				<!--End mc_embed_signup-->
+
+				<div class="section" id="about-section">
+					<a href="https://irascible.ch/">
+						<img alt="Irascible Logo" src="images/irascible.gif" id="irascible-logo">
+					</a>
+
+					<p>Contact: info@deanwake.com</p>
+					<p>Booking: booking@deanwake.com</p>
+					<p>© Dean Wake 2017</p>
+					<p>Black Shell Records</p>
+				</div>
 			</div>
 		</div>
 		<div id="animation_container" style="background-color:rgba(0, 0, 0, 1.00); width:1920px; height:1280px">
